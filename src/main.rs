@@ -28,11 +28,15 @@ fn main() {
     g.clear();
     println!("{}", worldThree);
 
-    let mut  h= String::from("aa aaa");
+    let mut h = String::from("aa aaa");
     let worldFour = first_worldThree(&h);//传入该字符串的整个字符串
     //此时清空字符串方法将报错，因为该变量已经成为不可变的
     h.clear();
     println!("{}", worldFour);
+
+    //===================字符串切片作为参数传递===================
+    let i = [0,1,2,4,5];
+    let i1 = &i[..3];//存储为数组的指针和长度
 }
 
 /*
